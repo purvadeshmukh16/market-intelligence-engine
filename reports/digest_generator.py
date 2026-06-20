@@ -275,17 +275,19 @@ Do not make specific buy/sell recommendations.
 
 
 def generate_digest():
-    """
-    Main function — pulls data, calls LLM,
-    saves report to file and DB
-    """
     print("\n📝 Generating Daily Market Digest...")
     print("-" * 40)
 
-    # Check API key
+    # ✅ ADD THIS CHECK
+    if not client:
+        print("❌ Groq client not available — skipping digest")
+        # Save placeholder so pipeline doesn't crash
+        date_str = datetime.now().strftime("%Y-%m-%d")
+        save_digest(date_str, "Digest unavailable — Groq client error")
+        return "Digest skipped"
+
     if not os.getenv("GROQ_API_KEY"):
-        print("❌ GROQ_API_KEY not found in .env")
-        print("   Get free key at console.groq.com")
+        print("❌ GROQ_API_KEY not found")
         return None
 
     # Step 1 — gather data

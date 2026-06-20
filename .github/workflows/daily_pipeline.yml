@@ -63,7 +63,8 @@ jobs:
       - name: Train prediction models
         run: python analysis/prediction.py
 
-      - name: Generate LLM digest
+      - - name: Generate LLM digest
+        continue-on-error: true
         run: python reports/digest_generator.py
 
       - name: Commit updated database
