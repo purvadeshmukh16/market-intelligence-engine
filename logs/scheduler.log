@@ -1,0 +1,59 @@
+2026-06-19 18:02:41,443 | INFO     | Scheduler starting up at 2026-06-19T18:02:41
+2026-06-19 18:02:41,444 | INFO     | Tracking tickers: AAPL, TSLA, MSFT, NVDA, AMZN
+2026-06-19 18:02:41,444 | INFO     | Running pipeline once immediately on startup...
+2026-06-19 18:02:41,444 | INFO     | ============================================================
+2026-06-19 18:02:41,444 | INFO     | PIPELINE START
+2026-06-19 18:02:42,238 | INFO     | NumExpr defaulting to 16 threads.
+2026-06-19 18:02:42,648 | INFO     | Running news_collector...
+2026-06-19 18:02:42,650 | ERROR    | news_collector FAILED:
+Traceback (most recent call last):
+  File "C:\Users\purva\Desktop\projects\market_sentiment_platform\scheduler\scheduler.py", line 62, in run_pipeline
+    news_collector.run(TICKERS)
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: module 'collectors.news_collector' has no attribute 'run'
+
+2026-06-19 18:02:42,655 | INFO     | Running stocktwits_collector...
+2026-06-19 18:02:42,656 | ERROR    | stocktwits_collector FAILED:
+Traceback (most recent call last):
+  File "C:\Users\purva\Desktop\projects\market_sentiment_platform\scheduler\scheduler.py", line 70, in run_pipeline
+    stocktwits_collector.run(TICKERS)
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'collectors.stocktwits_collector' has no attribute 'run'
+
+2026-06-19 18:02:43,347 | INFO     | Running stock_collector...
+2026-06-19 18:02:43,348 | ERROR    | stock_collector FAILED:
+Traceback (most recent call last):
+  File "C:\Users\purva\Desktop\projects\market_sentiment_platform\scheduler\scheduler.py", line 78, in run_pipeline
+    stock_collector.run(TICKERS)
+    ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'collectors.stock_collector' has no attribute 'run'
+
+2026-06-19 18:02:57,516 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-19 18:02:57,518 | WARNING  | Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-06-19 18:02:57,602 | INFO     | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ProsusAI/finbert/4556d13015211d73dccd3fdd39d39232506f3e43/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-06-19 18:02:57,907 | INFO     | HTTP Request: GET https://huggingface.co/api/models/ProsusAI/finbert/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-06-19 18:02:58,244 | INFO     | HTTP Request: GET https://huggingface.co/api/models/ProsusAI/finbert/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-06-19 18:02:58,650 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-06-19 18:02:58,762 | INFO     | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/ProsusAI/finbert/4556d13015211d73dccd3fdd39d39232506f3e43/config.json "HTTP/1.1 200 OK"
+2026-06-19 18:02:59,153 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+2026-06-19 18:02:59,570 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/main/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+2026-06-19 18:02:59,974 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/main/pytorch_model.bin "HTTP/1.1 302 Found"
+2026-06-19 18:03:00,280 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
+2026-06-19 18:03:00,896 | INFO     | HTTP Request: GET https://huggingface.co/api/models/ProsusAI/finbert "HTTP/1.1 200 OK"
+2026-06-19 18:03:01,202 | INFO     | Running finbert_analyzer...
+2026-06-19 18:03:01,203 | ERROR    | finbert_analyzer FAILED:
+Traceback (most recent call last):
+  File "C:\Users\purva\Desktop\projects\market_sentiment_platform\scheduler\scheduler.py", line 87, in run_pipeline
+    finbert_analyzer.run()
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'sentiment.finbert_analyzer' has no attribute 'run'
+
+2026-06-19 18:03:01,203 | INFO     | PIPELINE END
+2026-06-19 18:03:01,204 | INFO     | ============================================================
+2026-06-19 18:03:01,204 | INFO     | Scheduled: pipeline every 2 hours, digest daily at 08:00
+2026-06-19 18:03:01,204 | INFO     | Scheduler is now running. Press Ctrl+C to stop.
+2026-06-19 18:03:01,390 | INFO     | HTTP Request: GET https://huggingface.co/api/models/ProsusAI/finbert/commits/main "HTTP/1.1 200 OK"
+2026-06-19 18:03:01,822 | INFO     | HTTP Request: GET https://huggingface.co/api/models/ProsusAI/finbert/discussions?p=0 "HTTP/1.1 200 OK"
+2026-06-19 18:03:02,130 | INFO     | HTTP Request: GET https://huggingface.co/api/models/ProsusAI/finbert/commits/refs%2Fpr%2F29 "HTTP/1.1 200 OK"
+2026-06-19 18:03:02,430 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/refs%2Fpr%2F29/model.safetensors.index.json "HTTP/1.1 404 Not Found"
+2026-06-19 18:03:02,863 | INFO     | HTTP Request: HEAD https://huggingface.co/ProsusAI/finbert/resolve/refs%2Fpr%2F29/model.safetensors "HTTP/1.1 302 Found"
