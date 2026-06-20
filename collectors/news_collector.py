@@ -153,7 +153,7 @@ def fetch_all_news():
     all_articles = []
 
     COMPANIES = {
-         "AAPL":         "Apple",
+    "AAPL":         "Apple",
     "TSLA":         "Tesla",
     "MSFT":         "Microsoft",
     "NVDA":         "NVIDIA",
