@@ -217,6 +217,7 @@ if __name__ == "__main__":
         # Show sample
         print("\n📋 Sample headlines:")
         print("-" * 40)
+         
         for _, row in df.head(5).iterrows():
             print(f"[{row['ticker']}] {row['title'][:80]}...")
 
