@@ -30,7 +30,11 @@ STOCKS = {
 OUTPUT_DIR = "data/processed/digests"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+try:
+    client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+except Exception as e:
+    print(f"⚠️  Groq client init failed: {e}")
+    client = None
 
 # ─────────────────────────────────────────
 # DATA GATHERING
