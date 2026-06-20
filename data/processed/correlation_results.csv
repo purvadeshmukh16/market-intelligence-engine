@@ -1,0 +1,6 @@
+ticker,data_points,same_day_news_corr,same_day_p_value,lagged_news_corr,lagged_p_value,social_sentiment_corr,combined_corr,interpretation,signal_strength
+AAPL,20,-0.069,0.7724,0.235,0.3193,0.114,-0.011,Moderate positive relationship,⚪ Not statistically significant
+TSLA,20,0.173,0.465,-0.098,0.681,,0.173,Weak negative relationship,⚪ Not statistically significant
+MSFT,20,0.042,0.8615,-0.06,0.803,,0.042,Weak negative relationship,⚪ Not statistically significant
+NVDA,20,-0.113,0.6345,-0.264,0.261,,-0.113,Moderate negative relationship,⚪ Not statistically significant
+AMZN,20,0.349,0.1319,-0.373,0.1054,0.373,0.48,Moderate negative relationship,⚪ Not statistically significant

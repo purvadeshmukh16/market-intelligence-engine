@@ -19,15 +19,15 @@ NEWS_API_KEY = os.getenv("NEWS_API_KEY")
 
 # Keywords mapped to tickers
 STOCK_KEYWORDS = {
-    "AAPL":  ["Apple stock", "Apple Inc earnings", "AAPL"],
-    "TSLA":  ["Tesla stock", "Tesla earnings", "TSLA"],
-    "MSFT":  ["Microsoft stock", "Microsoft earnings", "MSFT"],
-    "NVDA":  ["NVIDIA stock", "NVIDIA earnings", "NVDA"],
-    "AMZN":  ["Amazon stock", "Amazon earnings", "AMZN"],
-    "GOOGL": ["Google stock" ,"Googl earnings","GOOGL"],      # ← add this
-    "META":  ["Meta stock","Meta earnings", "META"],        # ← add this
-    "RELIANCE.NS": ["Reliance stock", "Reliance earnings","RELIANCE.NS"],  # ← Indian stock
-    "TCS.NS": ["TCS stock", "TCS earnings","TCS.NS"]
+     "AAPL":         ["Apple stock", "Apple Inc earnings", "AAPL"],
+    "TSLA":         ["Tesla stock", "Tesla earnings", "TSLA"],
+    "MSFT":         ["Microsoft stock", "Microsoft earnings", "MSFT"],
+    "NVDA":         ["NVIDIA stock", "NVIDIA earnings", "NVDA"],
+    "AMZN":         ["Amazon stock", "Amazon earnings", "AMZN"],
+    "GOOGL":        ["Google stock", "Google earnings", "GOOGL"],
+    "META":         ["Meta stock", "Meta earnings", "META"],
+    "RELIANCE.NS":  ["Reliance Industries stock", "Reliance earnings"],
+    "TCS.NS":       ["TCS stock", "Tata Consultancy earnings", "TCS"]
 }
 
 # ─────────────────────────────────────────
@@ -153,11 +153,15 @@ def fetch_all_news():
     all_articles = []
 
     COMPANIES = {
-        "AAPL": "Apple",
-        "TSLA": "Tesla",
-        "MSFT": "Microsoft",
-        "NVDA": "NVIDIA",
-        "AMZN": "Amazon"
+         "AAPL":         "Apple",
+    "TSLA":         "Tesla",
+    "MSFT":         "Microsoft",
+    "NVDA":         "NVIDIA",
+    "AMZN":         "Amazon",
+    "GOOGL":        "Google",
+    "META":         "Meta",
+    "RELIANCE.NS":  "Reliance Industries",
+    "TCS.NS":       "TCS"
     }
 
     for ticker, keywords in STOCK_KEYWORDS.items():

@@ -16,11 +16,15 @@ from database.db_manager import get_connection, save_digest
 # ─────────────────────────────────────────
 
 STOCKS = {
-    "AAPL": "Apple",
-    "TSLA": "Tesla",
-    "MSFT": "Microsoft",
-    "NVDA": "NVIDIA",
-    "AMZN": "Amazon"
+     "AAPL":        "Apple",
+    "TSLA":        "Tesla",
+    "MSFT":        "Microsoft",
+    "NVDA":        "NVIDIA",
+    "AMZN":        "Amazon",
+    "GOOGL":       "Google",
+    "META":        "Meta",
+    "RELIANCE.NS": "Reliance",
+    "TCS.NS":      "TCS"
 }
 
 OUTPUT_DIR = "data/processed/digests"

@@ -18,10 +18,8 @@ STOCKS = {
     "MSFT":  "Microsoft",
     "NVDA":  "NVIDIA",
     "AMZN":  "Amazon",
-    "GOOGL": "Google",      # ← add this
-    "META":  "Meta",        # ← add this
-    "RELIANCE.NS": "Reliance",  # ← Indian stock
-    "TCS.NS": "TCS"         
+    "GOOGL": "Google",
+    "META":  "Meta"        
 }
 
 # ─────────────────────────────────────────

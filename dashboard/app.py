@@ -68,11 +68,15 @@ st.markdown("""
 # ─────────────────────────────────────────
 
 STOCKS = {
-    "AAPL": "Apple",
-    "TSLA": "Tesla",
-    "MSFT": "Microsoft",
-    "NVDA": "NVIDIA",
-    "AMZN": "Amazon"
+    "AAPL":        "Apple",
+    "TSLA":        "Tesla",
+    "MSFT":        "Microsoft",
+    "NVDA":        "NVIDIA",
+    "AMZN":        "Amazon",
+    "GOOGL":       "Google",
+    "META":        "Meta",
+    "RELIANCE.NS": "Reliance",
+    "TCS.NS":      "TCS"
 }
 
 with st.sidebar:
