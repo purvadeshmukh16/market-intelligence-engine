@@ -1,10 +1,14 @@
+# Secret files — never push these
 .env
+venv/
 __pycache__/
 *.pyc
 *.pyo
-data/raw/
-data/processed/
-models/
-*.db
 .DS_Store
-digests/
+
+# Raw data CSVs — too large for GitHub
+data/raw/
+
+# Keep these — needed for dashboard
+# data/market_sentiment.db  ← do NOT ignore this
+# models/                   ← do NOT ignore this
