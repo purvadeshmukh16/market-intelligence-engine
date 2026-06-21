@@ -1,0 +1,23 @@
+MARKET INTELLIGENCE BRIEFING
+June 20, 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+MARKET OVERVIEW
+The overall market sentiment is mixed, with neutral to negative sentiment observed in major stocks such as Microsoft, Amazon, and Tesla. Despite this, most stocks have shown a positive price movement, with NVIDIA and Amazon leading the way with gains of 2.95% and 2.9%, respectively. The lack of machine learning predictions for these stocks adds to the uncertainty in the market.
+
+STOCK ANALYSIS
+Apple's sentiment remains neutral, with a slight increase in price, while Tesla's negative sentiment has not hindered its 1.04% price gain. Microsoft's negative sentiment is reflected in its minimal 0.13% price increase, and Amazon's negative sentiment has not stopped its 2.9% price surge. NVIDIA's neutral sentiment and significant 2.95% price gain make it a stock to watch, although the lack of machine learning predictions for all these stocks limits our ability to forecast future movements.
+
+KEY SIGNALS TO WATCH
+* The impact of Azure's growth shortfall on Microsoft's stock price
+* The effect of Autopark upgrades on Tesla's stock performance
+* The potential for NVIDIA's price to continue rising despite being down from its record high
+
+SENTIMENT SUMMARY TABLE
+| Stock | Sentiment | Price Change | Prediction |
+| --- | --- | --- | --- |
+| AAPL | NEUTRAL | 0.7% | N/A |
+| TSLA | NEGATIVE | 1.04% | N/A |
+| MSFT | NEGATIVE | 0.13% | N/A |
+| NVDA | NEUTRAL | 2.95% | N/A |
+| AMZN | NEGATIVE | 2.9% | N/A |
