@@ -419,28 +419,53 @@ def show_prediction_cols(stocks_subset):
         with cols[i]:
             try:
                 pred = predict_tomorrow(ticker)
-                if pred:
-                    arrow = "📈" if pred["direction"] == 1 else "📉"
-                    color = "green" if pred["direction"] == 1 else "red"
+                if pred and isinstance(pred, dict):
+                    direction = pred.get("direction", None)
+                    confidence = pred.get("confidence", 0)
+
+                    if direction == 1:
+                        arrow = "📈"
+                        color = "green"
+                        move  = "UP"
+                    elif direction == 0:
+                        arrow = "📉"
+                        color = "red"
+                        move  = "DOWN"
+                    else:
+                        arrow = "⬜"
+                        color = "gray"
+                        move  = "N/A"
+
                     st.markdown(
-                        f"**{ticker}**<br>"
+                        f"<div style='text-align:center'>"
+                        f"<b>{ticker}</b><br>"
+                        f"<span style='font-size:2rem'>{arrow}</span><br>"
                         f"<span style='color:{color};"
-                        f"font-size:1.8rem'>{arrow}</span><br>"
-                        f"<small>{company}</small><br>"
-                        f"<small>{pred['confidence']}% confidence</small>",
+                        f"font-weight:bold'>{move}</span><br>"
+                        f"<small style='color:gray'>{company}</small><br>"
+                        f"<small>{round(confidence)}% confidence</small>"
+                        f"</div>",
                         unsafe_allow_html=True
                     )
                 else:
                     st.markdown(
-                        f"**{ticker}**<br>⬜<br>"
-                        f"<small>{company}</small><br>"
-                        f"<small>No data</small>",
+                        f"<div style='text-align:center'>"
+                        f"<b>{ticker}</b><br>"
+                        f"<span style='font-size:2rem'>⬜</span><br>"
+                        f"<span style='color:gray'>N/A</span><br>"
+                        f"<small style='color:gray'>{company}</small><br>"
+                        f"<small>No data yet</small>"
+                        f"</div>",
                         unsafe_allow_html=True
                     )
-            except Exception:
+            except Exception as e:
                 st.markdown(
-                    f"**{ticker}**<br>⬜<br>"
-                    f"<small>{company}</small>",
+                    f"<div style='text-align:center'>"
+                    f"<b>{ticker}</b><br>"
+                    f"<span style='font-size:2rem'>⬜</span><br>"
+                    f"<span style='color:gray'>N/A</span><br>"
+                    f"<small style='color:gray'>{company}</small>"
+                    f"</div>",
                     unsafe_allow_html=True
                 )
 
