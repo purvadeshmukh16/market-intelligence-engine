@@ -1,6 +1,6 @@
 ticker,data_points,same_day_news_corr,same_day_p_value,lagged_news_corr,lagged_p_value,social_sentiment_corr,combined_corr,interpretation,signal_strength
-AAPL,867,0.023,0.4922,-0.087,0.0104,-0.022,0.018,Weak negative relationship,🟢 Weak signal
-TSLA,867,0.129,0.0001,0.008,0.8143,0.12,0.134,Weak positive relationship,⚪ Not statistically significant
-MSFT,867,-0.036,0.2856,0.025,0.4675,0.008,-0.035,Weak positive relationship,⚪ Not statistically significant
-NVDA,867,-0.018,0.5916,-0.056,0.0994,-0.034,-0.02,Weak negative relationship,⚪ Not statistically significant
-AMZN,867,0.016,0.6438,-0.047,0.1663,0.079,0.032,Weak negative relationship,⚪ Not statistically significant
+AAPL,889,0.016,0.6309,-0.082,0.0141,-0.011,0.013,Weak negative relationship,🟢 Weak signal
+TSLA,889,0.126,0.0002,0.002,0.9638,0.093,0.129,Weak positive relationship,⚪ Not statistically significant
+MSFT,889,-0.015,0.6448,0.068,0.0436,-0.074,-0.025,Weak positive relationship,🟢 Weak signal
+NVDA,889,-0.003,0.9397,-0.051,0.1317,-0.07,-0.008,Weak negative relationship,⚪ Not statistically significant
+AMZN,889,-0.03,0.3663,-0.02,0.558,0.111,-0.002,Weak negative relationship,⚪ Not statistically significant
